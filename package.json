@@ -1,0 +1,21 @@
+{
+  "name": "nextjs-f",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "next": "9.1.1",
+    "office-ui-fabric-react": "^7.64.1",
+    "react": "16.10.2",
+    "react-dom": "16.10.2"
+  },
+  "devDependencies": {
+    "@types/node": "^12.12.12",
+    "@types/react": "^16.9.12",
+    "typescript": "^3.7.2"
+  }
+}
