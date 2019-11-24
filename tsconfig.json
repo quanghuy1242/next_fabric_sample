@@ -16,7 +16,12 @@
     "moduleResolution": "node",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "baseUrl": ".",
+    "paths": {
+      "@components": ["./components/index.ts"],
+      "@components/*": ["./components/*"]
+    }
   },
   "exclude": [
     "node_modules"
