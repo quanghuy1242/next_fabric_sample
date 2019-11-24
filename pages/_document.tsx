@@ -10,13 +10,7 @@ interface IDocumentProps {
 class MyDocument extends Document<IDocumentProps> {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
-    const styleSheet = Stylesheet.getInstance();
-    styleSheet.setConfig({
-      onInsertRule: (rule) => {
-        loadStyles(rule);
-      }
-    });
-    return { ...initialProps, style: styleSheet.getRules(true) };
+    return { ...initialProps };
   }
 
   render() {
@@ -26,7 +20,6 @@ class MyDocument extends Document<IDocumentProps> {
         <Head>
           <link rel='icon' href='/favicon.ico' />
         </Head>
-        <style dangerouslySetInnerHTML={{ __html: this.props.style }} />
         <body>
           <Main />
           <NextScript />
