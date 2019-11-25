@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import Head from 'next/head';
-import { Link } from '../components/Link';
+import Link from 'next/link';
 import { PrimaryButton, TextField, Stack } from 'office-ui-fabric-react';
 
 const Home: FC = () => (
