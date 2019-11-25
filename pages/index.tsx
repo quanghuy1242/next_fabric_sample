@@ -20,6 +20,9 @@ const Home: FC = () => (
         <Link href="/post/[postId]" as={`/post/${'introduction-infomation'}`}>
           <PrimaryButton text="Introduction" />
         </Link>
+        <Link href="/about">
+          <PrimaryButton text="About" />
+        </Link>
       </Stack>
     </Stack>
   </>
