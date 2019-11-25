@@ -1,1 +1,1 @@
-export const Name = 'Quang Huy';
+export const Name: string = 'Quang Huy';
