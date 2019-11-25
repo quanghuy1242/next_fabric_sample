@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import Link from 'next/link';
+import { Link } from '../components/Link';
 import { PrimaryButton, Stack } from 'office-ui-fabric-react';
 
 const About: FC = () => (

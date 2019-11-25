@@ -1,10 +1,16 @@
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
 import { resetIds } from '@uifabric/utilities';
+import { Stylesheet } from '@uifabric/styling';
 
-class MyDocument extends Document {
+interface DocumentProps {
+  style: string;
+}
+
+class MyDocument extends Document<DocumentProps> {
   static async getInitialProps(ctx: DocumentContext) {
     const initialProps = await Document.getInitialProps(ctx);
-    return { ...initialProps };
+    const styleSheet = Stylesheet.getInstance();
+    return { ...initialProps, style: styleSheet.getRules(true) };
   }
 
   render() {
@@ -13,6 +19,7 @@ class MyDocument extends Document {
       <Html>
         <Head>
           <link rel='icon' href='/favicon.ico' />
+          <style id="ssr-style" dangerouslySetInnerHTML={{ __html: this.props.style }} />
         </Head>
         <body>
           <Main />
